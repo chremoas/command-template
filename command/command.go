@@ -1,7 +1,7 @@
 package command
 
 import (
-	proto "git.maurer-it.net/abaeve/chremoas/proto"
+	proto "github.com/abaeve/chremoas/proto"
 	"golang.org/x/net/context"
 )
 

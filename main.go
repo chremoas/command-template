@@ -2,18 +2,19 @@ package main
 
 import (
 	"fmt"
-	"git.maurer-it.net/abaeve/services-common/config"
+	"github.com/abaeve/services-common/config"
 	"github.com/micro/go-micro"
 
-	proto "git.maurer-it.net/abaeve/chremoas/proto"
-	"git.maurer-it.net/abaeve/chremoas-command-template/command"
+	proto "github.com/abaeve/chremoas/proto"
+	// This needs to be changed to point to the correct command location
+	"github.com/abaeve/chremoas-command-template/command"
 )
 
 var Version string = "1.0.0"
 var service micro.Service
 
 func main ( ) {
-	service = config.NewService(Version, "auth", initialize)
+	service = config.NewService(Version, "template", initialize)
 
 	if err := service.Run(); err != nil {
 		fmt.Println(err)
