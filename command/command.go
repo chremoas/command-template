@@ -21,7 +21,7 @@ func (c *Command) Exec(ctx context.Context, req *proto.ExecRequest, rsp *proto.E
 	return nil
 }
 
-func NewCommand() *Command {
-	newCommand := Command{}
+func NewCommand(name string) *Command {
+	newCommand := Command{name: name}
 	return &newCommand
 }

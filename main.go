@@ -22,9 +22,9 @@ func main ( ) {
 
 // This is commented because you may or may not need/want the https://git.maurer-it.net/abaeve/services-common
 //configuration related stuff.  This function is a callback from the config.NewService function.  Read those docs
-func initialize(_ *config.Configuration) error {
+func initialize(config *config.Configuration) error {
 	proto.RegisterCommandHandler(service.Server(),
-		command.NewCommand(),
+		command.NewCommand(config.Name),
 	)
 
 	return nil
