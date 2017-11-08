@@ -1,2 +1,10 @@
 namespace: the namespace where you micro bot is at
 name: the name of the command of this bot
+registry: The location of the registry (consul)
+
+# example
+namespace: com.domain.bot.command
+name: template
+registry:
+  hostname: localhost
+  port: 8500
