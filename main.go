@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"github.com/abaeve/services-common/config"
+	"github.com/chremoas/services-common/config"
 	"github.com/micro/go-micro"
 
-	proto "github.com/abaeve/chremoas/proto"
+	proto "github.com/chremoas/chremoas/proto"
 	// This needs to be changed to point to the correct command location
-	"github.com/abaeve/chremoas-command-template/command"
+	"github.com/chremoas/command-template/command"
 )
 
 var Version string = "1.0.0"
