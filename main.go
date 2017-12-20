@@ -10,11 +10,12 @@ import (
 	"github.com/chremoas/command-template/command"
 )
 
-var Version string = "1.0.0"
+var Version = "1.0.0"
 var service micro.Service
+var name = "template"
 
 func main ( ) {
-	service = config.NewService(Version, "template", initialize)
+	service = config.NewService(Version, "serviceType", name, initialize)
 
 	if err := service.Run(); err != nil {
 		fmt.Println(err)
@@ -24,7 +25,7 @@ func main ( ) {
 // This function is a callback from the config.NewService function.  Read those docs
 func initialize(config *config.Configuration) error {
 	proto.RegisterCommandHandler(service.Server(),
-		command.NewCommand(config.Name),
+		command.NewCommand(name),
 	)
 
 	return nil
