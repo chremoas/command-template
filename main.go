@@ -15,7 +15,7 @@ var service micro.Service
 var name = "template"
 
 func main ( ) {
-	service = config.NewService(Version, "serviceType", name, initialize)
+	service = config.NewService(Version, "cmd", name, initialize)
 
 	if err := service.Run(); err != nil {
 		fmt.Println(err)
