@@ -14,4 +14,4 @@ RUN rm -rf /var/cache/apk/*
 ENV MICRO_REGISTRY_ADDRESS chremoas-consul:8500
 
 CMD [""]
-ENTRYPOINT ["./template", "--configuration_file", "/etc/chremoas/template.yaml"]
+ENTRYPOINT ["./template", "--configuration_file", "/etc/chremoas/chremoas.yaml"]
