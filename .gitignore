@@ -24,5 +24,4 @@ _testmain.go
 *.test
 *.prof
 
-vendor/
 /command-template-linux-amd64
